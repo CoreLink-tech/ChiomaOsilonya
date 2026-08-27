@@ -11,17 +11,36 @@
     content="Osilonya Chioma Peace Oghosa, Youth Leader, Diplomat, Entrepreneur and Change Maker."
   >
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
   <style>
     :root {
-      --green: #087443;
-      --dark-green: #075a35;
+      --navy: #23345a;
+      --navy-deep: #141d35;
       --gold: #d9a441;
-      --cream: #f8f5ed;
-      --white: #ffffff;
-      --dark: #14231b;
-      --muted: #66736c;
-      --border: #e4e2d9;
-      --light-green: #eef7f1;
+      --gold-soft: #f0cc72;
+      --cream: #f6f1e4;
+      --white: #fffdf8;
+      --ink: #181e2e;
+      --muted: #6b6355;
+      --border: #e6ddc7;
+      --paper-tint: #efe8d5;
+    }
+
+    ::selection {
+      background: var(--gold);
+      color: var(--ink);
+    }
+
+    .grain {
+      background-image:
+        radial-gradient(rgba(24,30,46,0.05) 1px, transparent 1.4px);
+      background-size: 3px 3px;
     }
 
     * {
@@ -35,10 +54,42 @@
     }
 
     body {
-      font-family: Arial, Helvetica, sans-serif;
-      color: var(--dark);
+      font-family: 'Inter', Arial, Helvetica, sans-serif;
+      color: var(--ink);
       background: var(--white);
       line-height: 1.6;
+    }
+
+    h1, h2, h3,
+    .logo,
+    .about-card .initials,
+    .stat strong {
+      font-family: 'Anton', Arial, sans-serif;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+
+    .section-label,
+    .eyebrow,
+    .pillar-number,
+    .event-tag,
+    .quote-mark {
+      font-family: 'Space Mono', 'Courier New', monospace;
+    }
+
+    .section-label,
+    .eyebrow,
+    .event-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-label svg,
+    .eyebrow svg {
+      flex: none;
+      width: 14px;
+      height: 14px;
     }
 
     a {
@@ -78,7 +129,7 @@
     .logo {
       font-size: 26px;
       font-weight: 800;
-      color: var(--green);
+      color: var(--navy);
     }
 
     .nav-links {
@@ -95,7 +146,7 @@
     }
 
     .nav-links a:hover {
-      color: var(--green);
+      color: var(--navy);
     }
 
     .menu-btn {
@@ -109,61 +160,88 @@
     /* HERO */
 
     .hero {
+      position: relative;
       min-height: calc(100vh - 76px);
       background:
-        linear-gradient(
-          120deg,
-          rgba(7,90,53,0.97),
-          rgba(8,116,67,0.91)
-        );
-
-      color: white;
+        url('assets/paper-bg.jpg') center 18% / cover no-repeat,
+        var(--navy-deep);
+      color: var(--ink);
       display: flex;
       align-items: center;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        180deg,
+        rgba(20,26,46,0.06) 0%,
+        rgba(246,241,228,0) 22%,
+        rgba(246,241,228,0) 78%,
+        rgba(20,26,46,0.1) 100%
+      );
+      pointer-events: none;
     }
 
     .hero-inner {
+      position: relative;
+      z-index: 1;
       max-width: 1180px;
       width: 100%;
       margin: auto;
-      padding: 100px 24px;
+      padding: 130px 24px 150px;
     }
 
     .eyebrow {
-      display: inline-block;
+      display: inline-flex;
       margin-bottom: 22px;
-      font-size: 13px;
+      padding: 6px 12px;
+      background: var(--navy-deep);
+      color: var(--gold-soft);
+      font-size: 12px;
       letter-spacing: 1.5px;
       text-transform: uppercase;
-      opacity: 0.9;
+      transform: rotate(-1deg);
     }
 
     .hero h1 {
       max-width: 750px;
-      font-size: clamp(52px, 8vw, 100px);
-      line-height: 0.95;
-      letter-spacing: -4px;
-      margin-bottom: 30px;
+      font-size: clamp(48px, 8vw, 92px);
+      line-height: 0.98;
+      letter-spacing: -1px;
+      margin-bottom: 28px;
     }
 
     .hero h1 span {
-      color: #f0cc72;
+      display: inline-block;
+      background: var(--gold);
+      color: var(--navy-deep);
+      padding: 2px 14px 6px;
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+      transform: rotate(-1deg);
     }
 
     .hero-subtitle {
       max-width: 600px;
-      font-size: 23px;
-      margin-bottom: 28px;
-      color: rgba(255,255,255,0.9);
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 26px;
+      color: var(--ink);
     }
 
     .quote {
-      max-width: 550px;
-      font-size: 18px;
+      max-width: 480px;
+      font-size: 17px;
       font-style: italic;
-      border-left: 3px solid var(--gold);
-      padding-left: 18px;
+      background: var(--white);
+      border-left: 4px solid var(--gold);
+      padding: 16px 20px;
       margin-bottom: 35px;
+      box-shadow: 0 10px 26px rgba(20,26,46,0.12);
+      transform: rotate(0.6deg);
     }
 
     .buttons {
@@ -176,15 +254,15 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 14px 24px;
-      border-radius: 5px;
+      padding: 15px 26px;
       font-weight: 700;
+      font-size: 15px;
       transition: 0.25s;
     }
 
     .btn-primary {
       background: var(--gold);
-      color: #1c1b15;
+      color: var(--navy-deep);
     }
 
     .btn-primary:hover {
@@ -192,13 +270,14 @@
     }
 
     .btn-outline {
-      border: 1px solid rgba(255,255,255,0.5);
-      color: white;
+      border: 2px solid var(--navy);
+      color: var(--navy);
+      background: rgba(255,253,248,0.55);
     }
 
     .btn-outline:hover {
-      background: white;
-      color: var(--green);
+      background: var(--navy);
+      color: var(--white);
     }
 
     /* STATS */
@@ -232,7 +311,7 @@
     .stat strong {
       display: block;
       font-size: 34px;
-      color: var(--green);
+      color: var(--navy);
       margin-bottom: 5px;
     }
 
@@ -253,7 +332,7 @@
     }
 
     .section-label {
-      color: var(--green);
+      color: var(--navy);
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 1.5px;
@@ -288,7 +367,7 @@
     }
 
     .about-card {
-      background: var(--green);
+      background: var(--navy);
       color: white;
       min-height: 430px;
       padding: 50px;
@@ -322,7 +401,7 @@
     /* WORDS */
 
     .words {
-      background: var(--dark);
+      background: var(--ink);
       color: white;
     }
 
@@ -340,7 +419,7 @@
 
     .quote-card {
       padding: 38px;
-      background: var(--dark);
+      background: var(--ink);
       border: 1px solid rgba(255,255,255,0.08);
     }
 
@@ -375,7 +454,7 @@
 
     .pillar:hover {
       transform: translateY(-5px);
-      border-color: var(--green);
+      border-color: var(--navy);
       box-shadow: 0 15px 30px rgba(0,0,0,0.07);
     }
 
@@ -399,7 +478,7 @@
     /* EVENTS */
 
     .events {
-      background: var(--light-green);
+      background: var(--paper-tint);
     }
 
     .events-grid {
@@ -418,8 +497,8 @@
     .event-tag {
       display: inline-block;
       padding: 5px 9px;
-      background: var(--light-green);
-      color: var(--green);
+      background: var(--paper-tint);
+      color: var(--navy);
       font-size: 11px;
       font-weight: 800;
       margin-bottom: 22px;
@@ -457,7 +536,7 @@
 
     .contact-item strong {
       display: block;
-      color: var(--green);
+      color: var(--navy);
       margin-bottom: 4px;
     }
 
@@ -501,7 +580,7 @@
     input:focus,
     select:focus,
     textarea:focus {
-      border-color: var(--green);
+      border-color: var(--navy);
     }
 
     textarea {
@@ -518,7 +597,7 @@
     /* FOOTER */
 
     footer {
-      background: #062d1d;
+      background: var(--navy-deep);
       color: white;
       padding: 45px 24px;
     }
@@ -756,6 +835,7 @@
         <div class="about-text">
 
           <div class="section-label">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 9L14 5V19L4 15V9Z"/><path d="M14 9H18C19.5 9 20.5 10 20.5 11.5V12.5C20.5 14 19.5 15 18 15H14"/><path d="M6 15L7 20"/></svg>
             Who She Is
           </div>
 
@@ -803,6 +883,7 @@
       <div class="container">
 
         <div class="section-label">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 9L14 5V19L4 15V9Z"/><path d="M14 9H18C19.5 9 20.5 10 20.5 11.5V12.5C20.5 14 19.5 15 18 15H14"/><path d="M6 15L7 20"/></svg>
           Her Words
         </div>
 
@@ -868,6 +949,7 @@
       <div class="container">
 
         <div class="section-label">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 9L14 5V19L4 15V9Z"/><path d="M14 9H18C19.5 9 20.5 10 20.5 11.5V12.5C20.5 14 19.5 15 18 15H14"/><path d="M6 15L7 20"/></svg>
           What She Stands For
         </div>
 
@@ -977,6 +1059,7 @@
       <div class="container">
 
         <div class="section-label">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 9L14 5V19L4 15V9Z"/><path d="M14 9H18C19.5 9 20.5 10 20.5 11.5V12.5C20.5 14 19.5 15 18 15H14"/><path d="M6 15L7 20"/></svg>
           On the Ground
         </div>
 
@@ -1061,6 +1144,7 @@
         <div>
 
           <div class="section-label">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 9L14 5V19L4 15V9Z"/><path d="M14 9H18C19.5 9 20.5 10 20.5 11.5V12.5C20.5 14 19.5 15 18 15H14"/><path d="M6 15L7 20"/></svg>
             Get Involved
           </div>
 
