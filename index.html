@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script>document.documentElement.classList.replace('no-js', 'js');</script>
 
   <title>Osilonya Chioma Peace Oghosa | Voice for Change</title>
 
@@ -681,6 +683,33 @@
       );
 
       this.reset();
+
+    });
+
+
+    // Staggered slide-in reveal for pillar & event cards
+
+    document.querySelectorAll(".pillars-grid, .events-grid").forEach(grid => {
+
+      const cards = Array.from(grid.children);
+
+      const gridObserver = new IntersectionObserver((entries, obs) => {
+
+        entries.forEach(entry => {
+
+          if (!entry.isIntersecting) return;
+
+          cards.forEach((card, i) => {
+            setTimeout(() => card.classList.add("in-view"), i * 110);
+          });
+
+          obs.unobserve(entry.target);
+
+        });
+
+      }, { threshold: 0.15, rootMargin: "0px 0px -40px 0px" });
+
+      gridObserver.observe(grid);
 
     });
 

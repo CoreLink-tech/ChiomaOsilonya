@@ -450,6 +450,37 @@
     .pillar:nth-child(7) { --tilt: 1.5deg; }
     .pillar:nth-child(8) { --tilt: -1.2deg; }
 
+    .js .pillar {
+      opacity: 0;
+      filter: blur(6px);
+      transform: translateX(var(--slide-x, -70px)) rotate(calc(var(--tilt, 0deg) * 2.5)) scale(0.9);
+      transition:
+        transform 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+        opacity 0.6s ease,
+        filter 0.6s ease,
+        box-shadow 0.3s ease;
+    }
+
+    .pillar:nth-child(odd) { --slide-x: -70px; }
+    .pillar:nth-child(even) { --slide-x: 70px; }
+
+    .js .pillar.in-view {
+      opacity: 1;
+      filter: blur(0);
+      transform: translateX(0) rotate(var(--tilt, 0deg)) scale(1);
+    }
+
+    .js .pillar .pillar-icon {
+      transform: scale(0.4) rotate(-20deg);
+      opacity: 0;
+      transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 0.18s, opacity 0.4s ease 0.18s;
+    }
+
+    .js .pillar.in-view .pillar-icon {
+      transform: scale(1) rotate(0deg);
+      opacity: 1;
+    }
+
     .pillar:hover {
       transform: rotate(0deg) translateY(-6px) scale(1.02);
       box-shadow: 0 22px 40px rgba(24,30,46,0.16);
@@ -525,6 +556,37 @@
     .event:nth-child(4) { --tilt: -1.2deg; }
     .event:nth-child(5) { --tilt: 1.5deg; }
     .event:nth-child(6) { --tilt: -1deg; }
+
+    .js .event {
+      opacity: 0;
+      filter: blur(6px);
+      transform: translateX(var(--slide-x, -70px)) rotate(calc(var(--tilt, 0deg) * 2.5)) scale(0.9);
+      transition:
+        transform 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+        opacity 0.6s ease,
+        filter 0.6s ease,
+        box-shadow 0.3s ease;
+    }
+
+    .event:nth-child(odd) { --slide-x: -70px; }
+    .event:nth-child(even) { --slide-x: 70px; }
+
+    .js .event.in-view {
+      opacity: 1;
+      filter: blur(0);
+      transform: translateX(0) rotate(var(--tilt, 0deg)) scale(1);
+    }
+
+    .js .event .event-icon {
+      transform: scale(0.4) rotate(-20deg);
+      opacity: 0;
+      transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 0.18s, opacity 0.4s ease 0.18s;
+    }
+
+    .js .event.in-view .event-icon {
+      transform: scale(1) rotate(0deg);
+      opacity: 1;
+    }
 
     .event:hover {
       transform: rotate(0deg) translateY(-6px) scale(1.02);
