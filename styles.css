@@ -145,7 +145,7 @@
 
     .hero {
       position: relative;
-      height: clamp(600px, 86vh, 840px);
+      min-height: clamp(600px, 86vh, 840px);
       color: var(--white);
       overflow: hidden;
 
@@ -169,19 +169,19 @@
       position: relative;
       z-index: 1;
       max-width: 1320px;
-      height: clamp(600px, 86vh, 840px);
+      min-height: clamp(600px, 86vh, 840px);
       margin: auto;
 
       display: grid;
       grid-template-columns: 1.05fr 0.95fr;
-      align-items: center;
+      align-items: end;
     }
 
     .hero-inner {
       position: relative;
       z-index: 2;
       max-width: 560px;
-      padding: 110px 24px 60px 40px;
+      padding: 110px 24px 120px 40px;
       text-align: left;
     }
 
