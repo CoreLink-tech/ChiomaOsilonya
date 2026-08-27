@@ -703,7 +703,7 @@
           entry.target.classList.toggle("in-view", entry.isIntersecting);
         });
 
-      }, { threshold: 0.2, rootMargin: "0px 0px -60px 0px" });
+      }, { threshold: 0, rootMargin: "-28% 0px -10% 0px" });
 
       cards.forEach(card => cardObserver.observe(card));
 

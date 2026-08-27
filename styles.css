@@ -452,17 +452,17 @@
 
     .js .pillar {
       opacity: 0;
-      filter: blur(5px);
-      transform: translateX(var(--slide-x, -55px)) rotate(calc(var(--tilt, 0deg) * 2.5)) scale(0.92);
+      filter: blur(3px);
+      transform: translateX(var(--slide-x, -110px)) rotate(calc(var(--tilt, 0deg) * 2.5)) scale(0.94);
       transition:
-        transform 0.42s cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay, 0s),
-        opacity 0.32s ease var(--reveal-delay, 0s),
-        filter 0.32s ease var(--reveal-delay, 0s),
+        transform 0.55s cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay, 0s),
+        opacity 0.4s ease var(--reveal-delay, 0s),
+        filter 0.4s ease var(--reveal-delay, 0s),
         box-shadow 0.3s ease;
     }
 
-    .pillar:nth-child(odd) { --slide-x: -55px; }
-    .pillar:nth-child(even) { --slide-x: 55px; }
+    .pillar:nth-child(odd) { --slide-x: -110px; }
+    .pillar:nth-child(even) { --slide-x: 110px; }
 
     .js .pillar.in-view {
       opacity: 1;
@@ -561,17 +561,17 @@
 
     .js .event {
       opacity: 0;
-      filter: blur(5px);
-      transform: translateX(var(--slide-x, -55px)) rotate(calc(var(--tilt, 0deg) * 2.5)) scale(0.92);
+      filter: blur(3px);
+      transform: translateX(var(--slide-x, -110px)) rotate(calc(var(--tilt, 0deg) * 2.5)) scale(0.94);
       transition:
-        transform 0.42s cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay, 0s),
-        opacity 0.32s ease var(--reveal-delay, 0s),
-        filter 0.32s ease var(--reveal-delay, 0s),
+        transform 0.55s cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay, 0s),
+        opacity 0.4s ease var(--reveal-delay, 0s),
+        filter 0.4s ease var(--reveal-delay, 0s),
         box-shadow 0.3s ease;
     }
 
-    .event:nth-child(odd) { --slide-x: -55px; }
-    .event:nth-child(even) { --slide-x: 55px; }
+    .event:nth-child(odd) { --slide-x: -110px; }
+    .event:nth-child(even) { --slide-x: 110px; }
 
     .js .event.in-view {
       opacity: 1;
