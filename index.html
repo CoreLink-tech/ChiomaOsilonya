@@ -1,0 +1,1276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Osilonya Chioma Peace Oghosa | Voice for Change</title>
+
+  <meta
+    name="description"
+    content="Osilonya Chioma Peace Oghosa, Youth Leader, Diplomat, Entrepreneur and Change Maker."
+  >
+
+  <style>
+    :root {
+      --green: #087443;
+      --dark-green: #075a35;
+      --gold: #d9a441;
+      --cream: #f8f5ed;
+      --white: #ffffff;
+      --dark: #14231b;
+      --muted: #66736c;
+      --border: #e4e2d9;
+      --light-green: #eef7f1;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--dark);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    button,
+    input,
+    textarea,
+    select {
+      font: inherit;
+    }
+
+    /* NAVIGATION */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav {
+      max-width: 1180px;
+      margin: auto;
+      height: 76px;
+      padding: 0 24px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--green);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 14px;
+      font-weight: 600;
+      transition: 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--green);
+    }
+
+    .menu-btn {
+      display: none;
+      border: none;
+      background: none;
+      font-size: 28px;
+      cursor: pointer;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: calc(100vh - 76px);
+      background:
+        linear-gradient(
+          120deg,
+          rgba(7,90,53,0.97),
+          rgba(8,116,67,0.91)
+        );
+
+      color: white;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-inner {
+      max-width: 1180px;
+      width: 100%;
+      margin: auto;
+      padding: 100px 24px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 22px;
+      font-size: 13px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      opacity: 0.9;
+    }
+
+    .hero h1 {
+      max-width: 750px;
+      font-size: clamp(52px, 8vw, 100px);
+      line-height: 0.95;
+      letter-spacing: -4px;
+      margin-bottom: 30px;
+    }
+
+    .hero h1 span {
+      color: #f0cc72;
+    }
+
+    .hero-subtitle {
+      max-width: 600px;
+      font-size: 23px;
+      margin-bottom: 28px;
+      color: rgba(255,255,255,0.9);
+    }
+
+    .quote {
+      max-width: 550px;
+      font-size: 18px;
+      font-style: italic;
+      border-left: 3px solid var(--gold);
+      padding-left: 18px;
+      margin-bottom: 35px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 24px;
+      border-radius: 5px;
+      font-weight: 700;
+      transition: 0.25s;
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: #1c1b15;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      border: 1px solid rgba(255,255,255,0.5);
+      color: white;
+    }
+
+    .btn-outline:hover {
+      background: white;
+      color: var(--green);
+    }
+
+    /* STATS */
+
+    .stats {
+      max-width: 1180px;
+      margin: -55px auto 0;
+      position: relative;
+      padding: 0 24px;
+    }
+
+    .stats-grid {
+      background: white;
+      border: 1px solid var(--border);
+      box-shadow: 0 15px 45px rgba(0,0,0,0.08);
+
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .stat {
+      padding: 30px;
+      text-align: center;
+      border-right: 1px solid var(--border);
+    }
+
+    .stat:last-child {
+      border-right: none;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 34px;
+      color: var(--green);
+      margin-bottom: 5px;
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* GENERAL */
+
+    section {
+      padding: 110px 24px;
+    }
+
+    .container {
+      max-width: 1180px;
+      margin: auto;
+    }
+
+    .section-label {
+      color: var(--green);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-size: 12px;
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-size: clamp(36px, 5vw, 58px);
+      line-height: 1.05;
+      letter-spacing: -2px;
+      margin-bottom: 25px;
+    }
+
+    .section-intro {
+      max-width: 720px;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    /* ABOUT */
+
+    .about {
+      background: var(--cream);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .about-card {
+      background: var(--green);
+      color: white;
+      min-height: 430px;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
+    .about-card .initials {
+      font-size: 100px;
+      line-height: 1;
+      font-weight: 900;
+      color: var(--gold);
+      margin-bottom: auto;
+    }
+
+    .about-card h3 {
+      font-size: 26px;
+      margin-bottom: 8px;
+    }
+
+    .about-card p {
+      opacity: 0.85;
+    }
+
+    .about-text p {
+      margin-bottom: 20px;
+      color: #53605a;
+    }
+
+    /* WORDS */
+
+    .words {
+      background: var(--dark);
+      color: white;
+    }
+
+    .words .section-label {
+      color: var(--gold);
+    }
+
+    .quotes-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1px;
+      margin-top: 50px;
+      background: rgba(255,255,255,0.12);
+    }
+
+    .quote-card {
+      padding: 38px;
+      background: var(--dark);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .quote-card p {
+      font-size: 20px;
+      line-height: 1.4;
+    }
+
+    .quote-mark {
+      color: var(--gold);
+      font-size: 50px;
+      line-height: 0.5;
+      margin-bottom: 20px;
+    }
+
+    /* PILLARS */
+
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      margin-top: 55px;
+    }
+
+    .pillar {
+      padding: 28px;
+      border: 1px solid var(--border);
+      background: white;
+      min-height: 250px;
+      transition: 0.25s;
+    }
+
+    .pillar:hover {
+      transform: translateY(-5px);
+      border-color: var(--green);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.07);
+    }
+
+    .pillar-number {
+      color: var(--gold);
+      font-weight: 900;
+      font-size: 13px;
+      margin-bottom: 35px;
+    }
+
+    .pillar h3 {
+      font-size: 19px;
+      margin-bottom: 12px;
+    }
+
+    .pillar p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* EVENTS */
+
+    .events {
+      background: var(--light-green);
+    }
+
+    .events-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 55px;
+    }
+
+    .event {
+      background: white;
+      padding: 30px;
+      border: 1px solid var(--border);
+    }
+
+    .event-tag {
+      display: inline-block;
+      padding: 5px 9px;
+      background: var(--light-green);
+      color: var(--green);
+      font-size: 11px;
+      font-weight: 800;
+      margin-bottom: 22px;
+    }
+
+    .event h3 {
+      margin-bottom: 12px;
+      font-size: 20px;
+    }
+
+    .event p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* CONTACT */
+
+    .contact {
+      background: var(--cream);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 80px;
+    }
+
+    .contact-info {
+      margin-top: 35px;
+    }
+
+    .contact-item {
+      margin-bottom: 24px;
+    }
+
+    .contact-item strong {
+      display: block;
+      color: var(--green);
+      margin-bottom: 4px;
+    }
+
+    .contact-item span {
+      color: var(--muted);
+    }
+
+    form {
+      background: white;
+      padding: 40px;
+      border: 1px solid var(--border);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .field {
+      margin-bottom: 18px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 7px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 13px 14px;
+      border: 1px solid var(--border);
+      outline: none;
+      background: white;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: var(--green);
+    }
+
+    textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+
+    .submit {
+      width: 100%;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #062d1d;
+      color: white;
+      padding: 45px 24px;
+    }
+
+    .footer-inner {
+      max-width: 1180px;
+      margin: auto;
+
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      align-items: center;
+    }
+
+    footer p {
+      color: rgba(255,255,255,0.65);
+      font-size: 13px;
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 900px) {
+
+      .nav-links {
+        position: absolute;
+        top: 76px;
+        left: 0;
+        right: 0;
+
+        background: white;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 25px;
+
+        display: none;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .pillars-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .events-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+
+      .hero-inner {
+        padding: 80px 20px;
+      }
+
+      .hero h1 {
+        font-size: 58px;
+        letter-spacing: -3px;
+      }
+
+      .hero-subtitle {
+        font-size: 19px;
+      }
+
+      section {
+        padding: 75px 20px;
+      }
+
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .stat {
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .stat:last-child {
+        border-bottom: none;
+      }
+
+      .quotes-grid,
+      .pillars-grid,
+      .events-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-card {
+        min-height: 350px;
+        padding: 30px;
+      }
+
+      form {
+        padding: 25px;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+
+  <header>
+    <nav class="nav">
+
+      <a href="#" class="logo">Chioma.</a>
+
+      <button class="menu-btn" id="menuBtn">
+        ☰
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#vision">Vision</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#contact">Get Involved</a></li>
+      </ul>
+
+    </nav>
+  </header>
+
+
+  <!-- HERO -->
+
+  <main>
+
+    <section class="hero">
+
+      <div class="hero-inner">
+
+        <div class="eyebrow">
+          Youth Leader · Diplomat · Entrepreneur · Change Maker
+        </div>
+
+        <h1>
+          Osilonya<br>
+          <span>Chioma Peace</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Voice for Positive Change & Inclusive Leadership
+        </p>
+
+        <p class="quote">
+          "We are not the future — we are the now."
+        </p>
+
+        <div class="buttons">
+          <a href="#vision" class="btn btn-primary">
+            See Her Vision
+          </a>
+
+          <a href="#contact" class="btn btn-outline">
+            Join the Movement
+          </a>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- STATS -->
+
+    <div class="stats">
+
+      <div class="stats-grid">
+
+        <div class="stat">
+          <strong>UNIBEN</strong>
+          <span>International Studies & Diplomacy</span>
+        </div>
+
+        <div class="stat">
+          <strong>7+</strong>
+          <span>Events & Programmes</span>
+        </div>
+
+        <div class="stat">
+          <strong>8</strong>
+          <span>Pillars of Impact</span>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- ABOUT -->
+
+    <section class="about" id="about">
+
+      <div class="container about-grid">
+
+        <div class="about-card">
+
+          <div class="initials">CO</div>
+
+          <div>
+            <h3>Osilonya Chioma Peace Oghosa</h3>
+            <p>
+              B.Sc. International Studies & Diplomacy
+            </p>
+            <p>
+              University of Benin · GenZ Leader
+            </p>
+            <p>
+              Entrepreneur & Community Builder
+            </p>
+          </div>
+
+        </div>
+
+        <div class="about-text">
+
+          <div class="section-label">
+            Who She Is
+          </div>
+
+          <h2 class="section-title">
+            Driven by purpose,<br>
+            defined by service
+          </h2>
+
+          <p>
+            Osilonya Chioma Peace Oghosa is a GenZ leader who graduated
+            from the University of Benin with a Bachelor's Degree in
+            International Studies and Diplomacy.
+          </p>
+
+          <p>
+            A multi-industry entrepreneur, she has worked with various
+            companies and brands, bringing energy, vision, and impact
+            wherever she goes.
+          </p>
+
+          <p>
+            She carries a deep passion for leadership, public service,
+            and social impact. She is driven by the desire to inspire
+            young people, advocate for civic responsibility, and
+            contribute to national and regional development.
+          </p>
+
+          <p>
+            For Chioma, leadership is not a title. It is a commitment
+            to show up, serve, and build bridges between where Nigeria
+            is and where it must go.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- WORDS -->
+
+    <section class="words">
+
+      <div class="container">
+
+        <div class="section-label">
+          Her Words
+        </div>
+
+        <h2 class="section-title">
+          Straight from the heart
+        </h2>
+
+        <div class="quotes-grid">
+
+          <div class="quote-card">
+            <div class="quote-mark">"</div>
+            <p>
+              We are not the future, we are the now.
+            </p>
+          </div>
+
+          <div class="quote-card">
+            <div class="quote-mark">"</div>
+            <p>
+              Your voice matters, and your participation shapes the future.
+            </p>
+          </div>
+
+          <div class="quote-card">
+            <div class="quote-mark">"</div>
+            <p>
+              Leadership begins with service and integrity.
+            </p>
+          </div>
+
+          <div class="quote-card">
+            <div class="quote-mark">"</div>
+            <p>
+              Growth comes from courage, consistency, and purpose.
+            </p>
+          </div>
+
+          <div class="quote-card">
+            <div class="quote-mark">"</div>
+            <p>
+              Empowered youths create stronger communities.
+            </p>
+          </div>
+
+          <div class="quote-card">
+            <div class="quote-mark">"</div>
+            <p>
+              Change starts when citizens decide to be involved.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- VISION -->
+
+    <section id="vision">
+
+      <div class="container">
+
+        <div class="section-label">
+          What She Stands For
+        </div>
+
+        <h2 class="section-title">
+          Eight pillars of real change
+        </h2>
+
+        <p class="section-intro">
+          Chioma's vision is built on concrete priorities,
+          empowering young Nigerians to thrive, lead, and build
+          the country they deserve.
+        </p>
+
+
+        <div class="pillars-grid">
+
+          <article class="pillar">
+            <div class="pillar-number">01</div>
+            <h3>Education & Youth Empowerment</h3>
+            <p>
+              Championing quality education and opportunities that
+              equip young Nigerians with the knowledge to lead and innovate.
+            </p>
+          </article>
+
+
+          <article class="pillar">
+            <div class="pillar-number">02</div>
+            <h3>Skill Acquisition</h3>
+            <p>
+              Promoting practical, hands-on skill programs that create
+              pathways to economic independence for young people.
+            </p>
+          </article>
+
+
+          <article class="pillar">
+            <div class="pillar-number">03</div>
+            <h3>Civic Rights & Responsible Citizenship</h3>
+            <p>
+              Educating and mobilizing citizens to understand their
+              rights and engage meaningfully in governance.
+            </p>
+          </article>
+
+
+          <article class="pillar">
+            <div class="pillar-number">04</div>
+            <h3>Women Empowerment & Inclusion</h3>
+            <p>
+              Breaking barriers so women can lead, participate,
+              and thrive equally in every space.
+            </p>
+          </article>
+
+
+          <article class="pillar">
+            <div class="pillar-number">05</div>
+            <h3>Leadership Development</h3>
+            <p>
+              Nurturing the next generation of purposeful leaders
+              through mentorship, training, and exposure.
+            </p>
+          </article>
+
+
+          <article class="pillar">
+            <div class="pillar-number">06</div>
+            <h3>Peacebuilding & National Unity</h3>
+            <p>
+              Fostering dialogue, tolerance, and shared identity
+              across ethnic, religious, and regional divides.
+            </p>
+          </article>
+
+
+          <article class="pillar">
+            <div class="pillar-number">07</div>
+            <h3>Youth in Governance & Policy</h3>
+            <p>
+              Advocating for genuine youth representation in
+              decision-making bodies.
+            </p>
+          </article>
+
+
+          <article class="pillar">
+            <div class="pillar-number">08</div>
+            <h3>Community Development & Social Impact</h3>
+            <p>
+              Building communities through outreach, volunteer
+              initiatives, and sustainable development projects.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- EVENTS -->
+
+    <section class="events" id="events">
+
+      <div class="container">
+
+        <div class="section-label">
+          On the Ground
+        </div>
+
+        <h2 class="section-title">
+          Where she has shown up
+        </h2>
+
+        <div class="events-grid">
+
+          <article class="event">
+            <span class="event-tag">Leadership</span>
+            <h3>Youth Leadership & Empowerment Programs</h3>
+            <p>
+              Participating in and facilitating programs designed
+              to build leadership capacity among young Nigerians.
+            </p>
+          </article>
+
+
+          <article class="event">
+            <span class="event-tag">Governance</span>
+            <h3>Political Events & House of Representatives Plenary</h3>
+            <p>
+              Observing and engaging with Nigeria's legislative
+              process firsthand at the National Assembly.
+            </p>
+          </article>
+
+
+          <article class="event">
+            <span class="event-tag">Civic Engagement</span>
+            <h3>Civic Engagement & Voter Awareness Campaigns</h3>
+            <p>
+              Mobilizing young Nigerians to understand the power
+              of their civic participation.
+            </p>
+          </article>
+
+
+          <article class="event">
+            <span class="event-tag">Diplomacy</span>
+            <h3>Diplomacy Seminars & Academic Workshops</h3>
+            <p>
+              Attending and contributing to academic forums on
+              diplomacy, international studies, and policy-making.
+            </p>
+          </article>
+
+
+          <article class="event">
+            <span class="event-tag">Community</span>
+            <h3>Community Outreach & Volunteer Initiatives</h3>
+            <p>
+              Giving back through grassroots programs,
+              community engagement, and volunteer-led initiatives.
+            </p>
+          </article>
+
+
+          <article class="event">
+            <span class="event-tag">National Service</span>
+            <h3>NYSC Community Development Service</h3>
+            <p>
+              Serving Nigeria through CDS activities and
+              contributing to local development.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section class="contact" id="contact">
+
+      <div class="container contact-grid">
+
+        <div>
+
+          <div class="section-label">
+            Get Involved
+          </div>
+
+          <h2 class="section-title">
+            Be part of what's next
+          </h2>
+
+          <p class="section-intro">
+            Chioma's movement runs on people, not just politics.
+            Whether you want to volunteer, invite her to speak,
+            collaborate on a project, or simply stay informed,
+            the door is open.
+          </p>
+
+          <div class="contact-info">
+
+            <div class="contact-item">
+              <strong>Email</strong>
+              <span>
+                osilonyachiomapeace@gmail.com
+              </span>
+            </div>
+
+            <div class="contact-item">
+              <strong>Location</strong>
+              <span>Nigeria</span>
+            </div>
+
+            <div class="contact-item">
+              <strong>Social</strong>
+              <span>@ChiomaOsilonya</span>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <form id="contactForm">
+
+          <div class="form-row">
+
+            <div class="field">
+              <label for="firstName">
+                First Name
+              </label>
+
+              <input
+                id="firstName"
+                name="firstName"
+                type="text"
+                placeholder="Emeka"
+                required
+              >
+            </div>
+
+
+            <div class="field">
+              <label for="lastName">
+                Last Name
+              </label>
+
+              <input
+                id="lastName"
+                name="lastName"
+                type="text"
+                placeholder="Nwosu"
+                required
+              >
+            </div>
+
+          </div>
+
+
+          <div class="field">
+
+            <label for="email">
+              Email Address
+            </label>
+
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="you@example.com"
+              required
+            >
+
+          </div>
+
+
+          <div class="field">
+
+            <label for="interest">
+              I want to
+            </label>
+
+            <select id="interest" name="interest">
+
+              <option value="">
+                Select
+              </option>
+
+              <option value="volunteer">
+                Volunteer
+              </option>
+
+              <option value="speaking">
+                Invite Chioma to speak
+              </option>
+
+              <option value="collaboration">
+                Collaborate
+              </option>
+
+              <option value="information">
+                Stay informed
+              </option>
+
+            </select>
+
+          </div>
+
+
+          <div class="field">
+
+            <label for="message">
+              Your Message
+            </label>
+
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Write your message..."
+              required
+            ></textarea>
+
+          </div>
+
+
+          <button
+            type="submit"
+            class="btn btn-primary submit"
+          >
+            Send Message
+          </button>
+
+        </form>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="footer-inner">
+
+      <p>
+        © 2025 Osilonya Chioma Peace Oghosa.
+        Empowering Nigeria's Now.
+      </p>
+
+      <p>
+        All rights reserved.
+      </p>
+
+    </div>
+
+  </footer>
+
+
+  <script>
+
+    const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
+
+    menuBtn.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+      });
+
+    });
+
+
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+
+      e.preventDefault();
+
+      const name = document.getElementById("firstName").value;
+
+      alert(
+        `Thanks ${name}. Your message has been received.`
+      );
+
+      this.reset();
+
+    });
+
+  </script>
+
+</body>
+</html>
