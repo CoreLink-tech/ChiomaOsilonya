@@ -426,6 +426,7 @@
       align-items: start;
       gap: 26px 20px;
       margin-top: 65px;
+      padding: 0 14px;
     }
 
     .pillar {
@@ -440,14 +441,14 @@
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .pillar:nth-child(1) { --tilt: -2deg; }
-    .pillar:nth-child(2) { --tilt: 1.5deg; }
+    .pillar:nth-child(1) { --tilt: -1.5deg; }
+    .pillar:nth-child(2) { --tilt: 1.2deg; }
     .pillar:nth-child(3) { --tilt: -1deg; }
-    .pillar:nth-child(4) { --tilt: 2deg; }
-    .pillar:nth-child(5) { --tilt: 1.5deg; }
-    .pillar:nth-child(6) { --tilt: -2deg; }
-    .pillar:nth-child(7) { --tilt: 2deg; }
-    .pillar:nth-child(8) { --tilt: -1.5deg; }
+    .pillar:nth-child(4) { --tilt: 1.5deg; }
+    .pillar:nth-child(5) { --tilt: 1.2deg; }
+    .pillar:nth-child(6) { --tilt: -1.5deg; }
+    .pillar:nth-child(7) { --tilt: 1.5deg; }
+    .pillar:nth-child(8) { --tilt: -1.2deg; }
 
     .pillar:hover {
       transform: rotate(0deg) translateY(-6px) scale(1.02);
@@ -503,6 +504,7 @@
       grid-template-columns: repeat(3, 1fr);
       gap: 30px 22px;
       margin-top: 65px;
+      padding: 0 14px;
     }
 
     .event {
@@ -517,11 +519,11 @@
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .event:nth-child(1) { --tilt: 1.5deg; }
-    .event:nth-child(2) { --tilt: -2deg; }
-    .event:nth-child(3) { --tilt: 1.5deg; }
-    .event:nth-child(4) { --tilt: -1.5deg; }
-    .event:nth-child(5) { --tilt: 2deg; }
+    .event:nth-child(1) { --tilt: 1.2deg; }
+    .event:nth-child(2) { --tilt: -1.5deg; }
+    .event:nth-child(3) { --tilt: 1.2deg; }
+    .event:nth-child(4) { --tilt: -1.2deg; }
+    .event:nth-child(5) { --tilt: 1.5deg; }
     .event:nth-child(6) { --tilt: -1deg; }
 
     .event:hover {
@@ -683,6 +685,14 @@
 
     /* RESPONSIVE */
 
+    @media (max-width: 1100px) {
+
+      .pillar,
+      .event {
+        transform: rotate(calc(var(--tilt, 0deg) * 0.75));
+      }
+    }
+
     @media (max-width: 1000px) {
 
       .pillars-grid {
@@ -746,7 +756,7 @@
 
       .pillar,
       .event {
-        transform: rotate(calc(var(--tilt, 0deg) * 0.5));
+        transform: rotate(calc(var(--tilt, 0deg) * 0.9));
       }
 
       .hero-grid {
@@ -843,7 +853,7 @@
 
       .pillar,
       .event {
-        transform: rotate(calc(var(--tilt, 0deg) * 0.25));
+        transform: rotate(calc(var(--tilt, 0deg) * 0.65));
       }
 
       form {
