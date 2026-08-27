@@ -687,29 +687,25 @@
     });
 
 
-    // Staggered slide-in reveal for pillar & event cards
+    // Staggered slide-in/out reveal for pillar & event cards
 
     document.querySelectorAll(".pillars-grid, .events-grid").forEach(grid => {
 
       const cards = Array.from(grid.children);
 
-      const gridObserver = new IntersectionObserver((entries, obs) => {
+      cards.forEach((card, i) => {
+        card.style.setProperty("--reveal-delay", `${(i % 4) * 0.05}s`);
+      });
+
+      const cardObserver = new IntersectionObserver(entries => {
 
         entries.forEach(entry => {
-
-          if (!entry.isIntersecting) return;
-
-          cards.forEach((card, i) => {
-            setTimeout(() => card.classList.add("in-view"), i * 110);
-          });
-
-          obs.unobserve(entry.target);
-
+          entry.target.classList.toggle("in-view", entry.isIntersecting);
         });
 
-      }, { threshold: 0.15, rootMargin: "0px 0px -40px 0px" });
+      }, { threshold: 0.2, rootMargin: "0px 0px -60px 0px" });
 
-      gridObserver.observe(grid);
+      cards.forEach(card => cardObserver.observe(card));
 
     });
 
