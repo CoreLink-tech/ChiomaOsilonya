@@ -281,7 +281,7 @@
 
         <div class="pillars-grid">
 
-          <article class="pillar">
+          <article class="pillar" tabindex="0" role="button" aria-expanded="false">
             <div class="pillar-number">01</div>
             <h3>Education & Youth Empowerment</h3>
             <p>
@@ -291,7 +291,7 @@
           </article>
 
 
-          <article class="pillar">
+          <article class="pillar" tabindex="0" role="button" aria-expanded="false">
             <div class="pillar-number">02</div>
             <h3>Skill Acquisition</h3>
             <p>
@@ -301,7 +301,7 @@
           </article>
 
 
-          <article class="pillar">
+          <article class="pillar" tabindex="0" role="button" aria-expanded="false">
             <div class="pillar-number">03</div>
             <h3>Civic Rights & Responsible Citizenship</h3>
             <p>
@@ -311,7 +311,7 @@
           </article>
 
 
-          <article class="pillar">
+          <article class="pillar" tabindex="0" role="button" aria-expanded="false">
             <div class="pillar-number">04</div>
             <h3>Women Empowerment & Inclusion</h3>
             <p>
@@ -321,7 +321,7 @@
           </article>
 
 
-          <article class="pillar">
+          <article class="pillar" tabindex="0" role="button" aria-expanded="false">
             <div class="pillar-number">05</div>
             <h3>Leadership Development</h3>
             <p>
@@ -331,7 +331,7 @@
           </article>
 
 
-          <article class="pillar">
+          <article class="pillar" tabindex="0" role="button" aria-expanded="false">
             <div class="pillar-number">06</div>
             <h3>Peacebuilding & National Unity</h3>
             <p>
@@ -341,7 +341,7 @@
           </article>
 
 
-          <article class="pillar">
+          <article class="pillar" tabindex="0" role="button" aria-expanded="false">
             <div class="pillar-number">07</div>
             <h3>Youth in Governance & Policy</h3>
             <p>
@@ -351,7 +351,7 @@
           </article>
 
 
-          <article class="pillar">
+          <article class="pillar" tabindex="0" role="button" aria-expanded="false">
             <div class="pillar-number">08</div>
             <h3>Community Development & Social Impact</h3>
             <p>
@@ -650,6 +650,25 @@
 
       link.addEventListener("click", () => {
         navLinks.classList.remove("active");
+      });
+
+    });
+
+
+    document.querySelectorAll(".pillar").forEach(card => {
+
+      const toggle = () => {
+        const isOpen = card.classList.toggle("is-open");
+        card.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      };
+
+      card.addEventListener("click", toggle);
+
+      card.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          toggle();
+        }
       });
 
     });
